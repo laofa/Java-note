@@ -77,7 +77,7 @@ doubleyourSalary=sc.nextDouble();
     java -jar SocketAdapter.jar  
 @pause  
 ```
-来自<http://blog.csdn.net/futuredream2008/article/details/17142665> 
+来自[bat脚本写法](http://blog.csdn.net/futuredream2008/article/details/17142665)
 #### 4.Abstract类是抽象类，所有的方法不能实现,继承abstract必须实现所有的方法
 #### 5.Alt+insert自动补充get和set函数
 #### 6.super关键字用来引用父类的内容,子类的继续用this
