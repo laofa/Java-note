@@ -61,5 +61,24 @@ String myInput = input
 #### 6.import语句和package语句对源文件中定义的所有类都有效，不能给不同的类不同的包声明
 
 ## D.IDEA和eclipse的区别
+![difference](https://github.com/laofa/Java-note/blob/master/IDEAandECLIPSE.png)
 
+## E.一些语法笔记
+#### 1.键盘输入数据
+```
+// 从命令行得到信息
+Scannersc=newScanner(System.in);  
+System.out.println("Pleaseinputyoursalary:");  
+doubleyourSalary=sc.nextDouble();  
+````
+#### 2.bat脚本写法（第三种）
+```
+@echo off  
+    java -jar SocketAdapter.jar  
+@pause  
+```
+来自<http://blog.csdn.net/futuredream2008/article/details/17142665> 
+#### 4.Abstract类是抽象类，所有的方法不能实现,继承abstract必须实现所有的方法
+#### 5.Alt+insert自动补充get和set函数
+#### 6.super关键字用来引用父类的内容,子类的继续用this
 
