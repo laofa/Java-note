@@ -1,6 +1,6 @@
 ## java数据类型和数据封装对象的一些笔记
 #### 1.好奇出发点
-    这次让我有兴趣写这个笔记的原因是自己在写一个java项目的时候，我需要将字符串类型的数据转换为整数，浮点数和科学计数的时候发现int和double类型可以
+  这次让我有兴趣写这个笔记的原因是自己在写一个java项目的时候，我需要将字符串类型的数据转换为整数，浮点数和科学计数的时候发现int和double类型可以
 选用的函数竟然都有两个，分别是Integer.parseInt(String s),Integer.valueOf(String s)和Double.parseDouble(String s)和Double.valueOf(String s)
 这两个函数，所以就很好奇这两种转换的函数有什么区别，仔细查看资料和阅读源码(IDEA无敌)才发现他们的返回值是不同的类型，我们看源码：  
 ```
@@ -12,7 +12,7 @@ public static Double valueOf(String s) throws NumberFormatException {
     return new Double(FloatingDecimal.readJavaFormatString(s).doubleValue());  
 }  
 ```
-    可以看出来parseDouble返回的值是一个基本数据类型double，然而valueOf返回的值是一个封装对象Double，Integer的转换函数也是类似的。正如我刚才描述的
+  可以看出来parseDouble返回的值是一个基本数据类型double，然而valueOf返回的值是一个封装对象Double，Integer的转换函数也是类似的。正如我刚才描述的
 那样子可以看出来基本数据类型在java里面还有一层对象封装，这些都有：  
 boolean Boolean  
 char Character  
@@ -73,6 +73,11 @@ bigDecimal : 120E+12
 bigDecimal : 120000000000000
 ```
 从结果我们可以得到几个结论：  
-a.Double.parseDouble()和Double.valueOf()参数都是字符串，返回的结果打印出来都是double类型。  
-b.查资料后我们发现a结论可以参考：double和Double两种类型在JDK1.5以后的版本可以自由的转换，便于使用静态函数。  
-c.BigDecimal的toString()的三个方法输出结果的区别是：toString()有必要时使用科学计数法，toEngineeringString()3的倍数的科学技术，toPlainString()不用科学计数法。  
+a.Double.parseDouble()和Double.valueOf()参数都是字符串，返回的结果打印出来都是double类型  
+b.查资料后我们发现a结论可以参考：double和Double两种类型在JDK1.5以后的版本可以自由的转换，便于使用静态函数  
+c.BigDecimal的toString()的三个方法输出结果的区别是：toString()有必要时使用科学计数法，toEngineeringString()3的倍数的科学技术，toPlainString()不用科学计数法  
+#### 3.判断一个字符是不是数字
+```
+Character.isDigit(string.charAt(index))
+>>return true or false 
+```
