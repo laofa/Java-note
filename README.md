@@ -1,2 +1,2 @@
-# Java-note
+# java-note
 Just note
